@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: AI Setter & Onboarding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#020617', /* slate-950 */
+                            emerald: '#10b981',
+                            violet: '#8b5cf6',
+                            blue: '#3b82f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            background-color: #020617; 
+            color: #f8fafc; 
+            overflow: hidden; 
+        }
+        .slide { 
+            animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; 
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4); /* slate-800 con opacidad */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-violet {
+            background: linear-gradient(to right, #8b5cf6, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom scrollbar for smaller screens if needed */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+    </style>
+</head>
+<body class="flex flex-col h-screen w-screen selection:bg-brand-emerald selection:text-white">
+
+    <!-- MARCA DE AGUA CORPORATIVA FIJA (Abajo a la derecha en todas las diapositivas) -->
+    <div class="fixed bottom-[104px] right-6 md:right-12 z-40 text-slate-500/80 font-semibold text-[10px] md:text-xs tracking-widest uppercase select-none pointer-events-none hover:text-slate-400 transition-colors">
+        Magik Consulting
+    </div>
+
+    <!-- ÁREA PRINCIPAL DE DIAPOSITIVAS -->
+    <main id="slider" class="flex-grow relative w-full h-[calc(100vh-80px)] flex items-center justify-center p-6 lg:p-16 overflow-y-auto overflow-x-hidden">
+        
+        <!-- ==================== DIAPOSITIVA 1: slide-1-portada.html ==================== -->
+<div class="slide text-center w-full max-w-5xl" id="slide-1">
+    <div class="mb-8 inline-flex items-center justify-center p-4 bg-brand-emerald/10 rounded-2xl border border-brand-emerald/20 shadow-[0_0_30px_rgba(16,185,129,0.15)]">
+        <svg class="w-10 h-10 text-brand-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+        <span class="text-white">AI Setter & Onboarding</span><br/>
+        <span class="text-gradient">Automatizado</span>
+    </h1>
+    <p class="text-xl md:text-2xl text-slate-400 mb-16 font-light tracking-wide">Propuesta de Automatización de Procesos para Llorens</p>
+    <div class="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 text-slate-500 text-sm tracking-wider uppercase">
+        Presentado por <span class="text-slate-300 font-medium">Magik Consulting</span> &nbsp;&bull;&nbsp; Julio 2026
+    </div>
+</div>
+
+
+        <!-- ==================== DIAPOSITIVA 2: slide-2-reto-objetivo.html ==================== -->
+<div class="slide hidden w-full max-w-6xl" id="slide-2">
+    <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">El Reto y <span class="text-gradient">El Objetivo</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-10 rounded-3xl relative overflow-hidden group hover:border-red-500/30 transition-colors duration-500">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-red-500/10 rounded-bl-full blur-3xl transition-opacity group-hover:opacity-100 opacity-50"></div>
+            <div class="relative z-10">
+                <h3 class="text-2xl font-semibold text-white mb-6 flex items-center gap-4">
+                    <span class="p-3 bg-slate-800/80 rounded-xl text-red-400 shadow-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg></span>
+                    El Reto Actual
+                </h3>
+                <p class="text-slate-400 leading-relaxed text-lg">
+                    El soporte manual, el onboarding guíado y la gestión de leads <strong class="text-slate-200">consume demasiado tiempo y energía</strong>. 
+                </p>
+                <p class="text-slate-400 leading-relaxed text-lg mt-4">
+                    Este cuello de botella operativo limitará drásticamente la capacidad de escalado cuando el tráfico y la captación de usuarios se reactive.
+                </p>
+            </div>
+        </div>
+        <div class="glass-card p-10 rounded-3xl relative overflow-hidden group hover:border-brand-emerald/30 transition-colors duration-500">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-brand-emerald/10 rounded-bl-full blur-3xl transition-opacity group-hover:opacity-100 opacity-50"></div>
+            <div class="relative z-10">
+                <h3 class="text-2xl font-semibold text-white mb-6 flex items-center gap-4">
+                    <span class="p-3 bg-slate-800/80 rounded-xl text-brand-emerald shadow-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+                    Nuestro Objetivo
+                </h3>
+                <p class="text-slate-400 leading-relaxed text-lg">
+                    Crear la <strong class="text-white">infraestructura automatizada en una Fase 1</strong> para liberar tiempo operativo.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-lg mt-4">
+                    Permitir que te enfoques 100% en <strong class="text-brand-emerald">análisis y contenido</strong>, asegurando una experiencia de usuario instantánea, sin fricciones y disponible 24/7.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- ==================== DIAPOSITIVA 3: slide-3-modulo-a.html ==================== -->
+<div class="slide hidden w-full max-w-6xl" id="slide-3">
+    <div class="mb-3 text-brand-violet font-bold tracking-widest uppercase text-sm">Módulo A</div>
+    <h2 class="text-3xl md:text-5xl font-bold mb-12">Onboarding y <span class="text-gradient-violet">Cualificación Inteligente</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-8 rounded-2xl border-t-4 border-t-brand-violet hover:bg-slate-800/60 transition-all duration-300 hover:-translate-y-1">
+            <div class="h-14 w-14 bg-brand-violet/20 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(139,92,246,0.15)]">
+                <svg class="w-7 h-7 text-brand-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+            </div>
+            <h4 class="text-xl font-semibold text-white mb-3">Flujo de Bienvenida</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">Interacción fluida e interactiva desde Instagram hacia el bot de Telegram. Recibe al usuario al instante mostrando profesionalidad.</p>
+        </div>
+        <div class="glass-card p-8 rounded-2xl border-t-4 border-t-brand-emerald hover:bg-slate-800/60 transition-all duration-300 hover:-translate-y-1">
+            <div class="h-14 w-14 bg-brand-emerald/20 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+                <svg class="w-7 h-7 text-brand-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h4 class="text-xl font-semibold text-white mb-3">Explicación Guiada</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">Instrucciones claras paso a paso para realizar el depósito de 200€ en los brokers asociados (Bullfy y PU Prime).</p>
+        </div>
+        <div class="glass-card p-8 rounded-2xl border-t-4 border-t-brand-blue hover:bg-slate-800/60 transition-all duration-300 hover:-translate-y-1">
+            <div class="h-14 w-14 bg-brand-blue/20 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+                <svg class="w-7 h-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h4 class="text-xl font-semibold text-white mb-3">Follow-ups Automáticos</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">El bot recontacta al lead a las pocas horas de forma personalizada si no ha completado el registro, maximizando la conversión.</p>
+        </div>
+    </div>
+</div>
+
+
+        <!-- ==================== DIAPOSITIVA 4: slide-4-modulo-b.html ==================== -->
+<div class="slide hidden w-full max-w-6xl" id="slide-4">
+    <div class="mb-3 text-brand-blue font-bold tracking-widest uppercase text-sm">Módulo B</div>
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Validación y Verificación <span class="text-gradient">de Depósitos</span></h2>
+    <p class="text-sm md:text-base text-amber-400/90 mb-8 bg-amber-500/10 border border-amber-500/20 px-4 py-2.5 rounded-xl inline-flex items-center gap-2">
+        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+        <span><strong>Nota de Integración:</strong> Al no existir APIs oficiales abiertas en <strong>PU Prime</strong> ni en <strong>Bullfy</strong>, planteamos dos soluciones eficientes para verificar depósitos:</span>
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Vía A -->
+        <div class="glass-card p-8 rounded-3xl border border-slate-700/60 relative overflow-hidden flex flex-col justify-between group hover:border-brand-emerald/30 transition-all duration-300">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-emerald/5 rounded-bl-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="px-3 py-1 bg-brand-emerald/20 text-brand-emerald rounded-lg font-bold text-sm">Vía A</span>
+                    <h3 class="text-2xl font-bold text-white">Verificación Asistida por IA</h3>
+                </div>
+                <ul class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                    <li class="flex items-start gap-2.5">
+                        <span class="text-brand-emerald font-bold mt-0.5">&bull;</span>
+                        <span>El usuario realiza el depósito y sube una <strong>captura de pantalla</strong> de la transacción directamente al bot.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <span class="text-brand-emerald font-bold mt-0.5">&bull;</span>
+                        <span>Una <strong>IA de visión</strong> integrada analiza la imagen en segundos para verificar que el importe (200€) y datos del broker sean válidos.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <span class="text-brand-emerald font-bold mt-0.5">&bull;</span>
+                        <span>Si la IA la detecta como válida, el sistema te envía una <strong>notificación directa a tu canal de preferencias</strong> con la confirmación para la posterior verificación y conceder el acceso.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 relative z-10">
+                ⚡ <strong>Ideal para:</strong> Reducir la carga de soporte filtrando capturas falsas o erróneas automáticamente antes de que te llegue la alerta.
+            </div>
+        </div>
+
+        <!-- Vía B -->
+        <div class="glass-card p-8 rounded-3xl border border-slate-700/60 relative overflow-hidden flex flex-col justify-between group hover:border-brand-violet/30 transition-all duration-300">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-violet/5 rounded-bl-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="px-3 py-1 bg-brand-violet/20 text-brand-violet rounded-lg font-bold text-sm">Vía B</span>
+                    <h3 class="text-2xl font-bold text-white">Alerta y Validación Directa</h3>
+                </div>
+                <ul class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                    <li class="flex items-start gap-2.5">
+                        <span class="text-brand-violet font-bold mt-0.5">&bull;</span>
+                        <span>El usuario finaliza el proceso de depósito y pulsa un botón en el bot: <strong>"Ya he depositado"</strong>.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <span class="text-brand-violet font-bold mt-0.5">&bull;</span>
+                        <span>El bot te envía una <strong>notificación estructurada a tu canal de preferencias</strong> indicando que el lead afirma haber terminado el depósito.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <span class="text-brand-violet font-bold mt-0.5">&bull;</span>
+                        <span>Tú compruebas rápidamente en tu panel de afiliado de los brokers y validas y autorizas su acceso en TradingView.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 relative z-10">
+                🛠️ <strong>Ideal para:</strong> Un control manual absoluto de afiliaciones con un desarrollo sumamente rápido y 100% fiable.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- ==================== DIAPOSITIVA 5: slide-5-modulo-c.html ==================== -->
+<div class="slide hidden w-full max-w-6xl" id="slide-5">
+    <div class="mb-3 text-brand-emerald font-bold tracking-widest uppercase text-sm">Módulo C</div>
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Acceso a Indicadores en <span class="text-gradient">TradingView</span></h2>
+    <p class="text-sm md:text-base text-rose-400/95 mb-8 bg-rose-500/10 border border-rose-500/20 px-4 py-2.5 rounded-xl inline-flex items-center gap-2">
+        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+        <span><strong>Advertencia de Seguridad:</strong> Analizamos con total transparencia las limitaciones técnicas de TradingView para asegurar la mejor experiencia.</span>
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+        <!-- Tarjeta 1 -->
+        <div class="glass-card p-8 rounded-2xl border border-slate-700/50 hover:bg-slate-800/40 transition-all duration-300 hover:-translate-y-1">
+            <div class="h-12 w-12 bg-slate-800 rounded-xl flex items-center justify-center mb-6 font-bold text-white text-lg border border-slate-700 shadow-md">
+                <svg class="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">Sin API Oficial</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Por motivos estrictos de protección de cuentas, TradingView <strong>no ofrece una API oficial</strong> que permita a aplicaciones externas otorgar accesos automáticos a indicadores protegidos (Invite-only).
+            </p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="glass-card p-8 rounded-2xl border border-red-500/20 bg-red-500/5 hover:bg-red-500/10 transition-all duration-300 hover:-translate-y-1">
+            <div class="h-12 w-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 font-bold text-red-400 text-lg border border-red-500/20 shadow-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-red-300 mb-3">Riesgo de Inestabilidad</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Aunque hay vías no oficiales, éstas requieren simular la navegación de una persona. Esto obliga a <strong>desactivar la verificación de 2 factores (2FA)</strong>, además de no ser fiable: cualquier actualización estética de TradingView rompería el script.
+            </p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="glass-card p-8 rounded-2xl border-brand-emerald/30 bg-brand-emerald/5 hover:bg-brand-emerald/10 transition-all duration-300 hover:-translate-y-1 shadow-[0_0_20px_rgba(16,185,129,0.05)]">
+            <div class="h-12 w-12 bg-brand-emerald/20 rounded-xl flex items-center justify-center mb-6 font-bold text-brand-emerald text-lg border border-brand-emerald/30 shadow-[0_0_10px_rgba(16,185,129,0.2)]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <h4 class="text-xl font-bold text-brand-emerald mb-3">Nuestra Recomendación</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">
+                Recomendamos enfáticamente seguir el <strong>proceso guiado de aviso</strong>. Tras la alerta de depósito del bot, tú solo necesitas añadir el usuario de TradingView de forma 100% segura, robusta y bajo tu control directo.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+        <!-- ==================== DIAPOSITIVA 6: slide-6-crm.html ==================== -->
+<div class="slide hidden w-full max-w-6xl" id="slide-6">
+    <div class="mb-3 text-brand-blue font-bold tracking-widest uppercase text-sm">Recomendación Estratégica</div>
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Gestión de Leads con <span class="text-gradient">GoHighLevel (GHL)</span></h2>
+    <p class="text-lg text-slate-400 mb-10">La plataforma líder de la industria para optimizar y controlar tu pipeline de ventas.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Beneficios -->
+        <div class="glass-card p-8 rounded-3xl border border-slate-700/60 relative overflow-hidden flex flex-col justify-between group hover:border-brand-blue/30 transition-all duration-300">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-blue/5 rounded-bl-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="p-2.5 bg-brand-blue/20 rounded-xl text-brand-blue"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></span>
+                    Pipeline de Ventas Visual
+                </h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Un embudo visual en formato Kanban (tarjetas arrastrables) para ver en tiempo real el estado exacto de cada lead: 
+                </p>
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 flex items-center justify-between text-[11px] md:text-xs font-semibold text-slate-400 font-mono mb-6">
+                    <span class="text-white">Registrado</span>
+                    <span>&rarr;</span>
+                    <span class="text-brand-violet">Contactado</span>
+                    <span>&rarr;</span>
+                    <span class="text-yellow-400">Dep. Pendiente</span>
+                    <span>&rarr;</span>
+                    <span class="text-brand-emerald">Acceso Concedido</span>
+                    <span>&rarr;</span>
+                    <span class="text-brand-emerald">Follow-up</span>
+                </div>
+                
+                <h4 class="text-white font-semibold text-sm mb-3">Información unificada por lead:</h4>
+                <ul class="space-y-3 text-slate-300 text-sm pl-1 mb-4">
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-4 h-4 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        <span><strong>Notas del Lead:</strong> Historial de incidencias, comentarios comerciales personalizados, UID del broker seleccionado, o anotaciones especiales de su perfil de trading.</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <svg class="w-4 h-4 text-brand-blue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        <span><strong>Estado de Follow-up:</strong> Control preciso del número de recordatorios automáticos enviados por el bot y la fecha de próxima reactivación.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+                📊 <strong>Visibilidad Comercial:</strong> Sabrás con total precisión cuántos leads se detienen en cada paso comercial para optimizar tu captación.
+            </div>
+        </div>
+
+        <!-- Automatización triggers -->
+        <div class="glass-card p-8 rounded-3xl border border-slate-700/60 relative overflow-hidden flex flex-col justify-between group hover:border-brand-emerald/30 transition-all duration-300">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-emerald/5 rounded-bl-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="p-2.5 bg-brand-emerald/20 rounded-xl text-brand-emerald"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></span>
+                    Automatizaciones de Arrastre
+                </h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Podrás arrastrar la tarjeta de un usuario a "Acceso Concedido" y, de forma automática, el sistema ejecutará acciones:
+                </p>
+                <ul class="space-y-3 text-slate-300 text-sm pl-2">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-brand-emerald shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Envío automático de Telegram personalizado confirmando su acceso.</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-brand-emerald shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Activación de secuencias de email de onboarding con materiales formativos.</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-brand-emerald shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Etiquetado y segmentación inteligente del lead para futuras campañas.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+                ⚙️ <strong>Ahorro de Tiempo:</strong> Libera al 100% de la carga de comunicación de bienvenida y materiales formativos de forma automatizada.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- ==================== DIAPOSITIVA 7: slide-7-presupuesto.html ==================== -->
+<div class="slide hidden w-full max-w-5xl" id="slide-7">
+    <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Presupuesto y <span class="text-gradient">Costes</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Inversión Única -->
+        <div class="glass-card rounded-3xl p-8 border-t-4 border-t-brand-emerald flex flex-col h-full justify-between">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-2">Inversión de Desarrollo</h3>
+                <div class="mb-8"><span class="inline-block px-3 py-1 bg-brand-emerald/10 text-brand-emerald text-xs font-bold uppercase tracking-wider rounded-full">Pago Único</span></div>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex justify-between items-center p-5 bg-slate-800/40 rounded-xl border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
+                        <div class="pr-4">
+                            <h4 class="font-semibold text-white text-lg">Desarrollo e Integración Integral</h4>
+                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">Fase 1 completa: Bot Telegram, Flujos de Captación, Sistema de Verificación Alternativo y Configuración del CRM.</p>
+                        </div>
+                        <div class="font-bold text-2xl text-brand-emerald shrink-0">1.500€</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex items-start gap-3 text-sm text-slate-300 bg-brand-emerald/5 p-4 rounded-xl border border-brand-emerald/20">
+                <svg class="w-5 h-5 text-brand-emerald shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <p class="text-xs">Incluye soporte post-lanzamiento para pruebas reales, optimizaciones del bot y garantía de funcionamiento.</p>
+            </div>
+        </div>
+
+        <!-- Costes Recurrentes -->
+        <div class="glass-card rounded-3xl p-8 border-t-4 border-t-brand-violet flex flex-col h-full">
+            <h3 class="text-2xl font-bold text-white mb-2">Costes de Infraestructura</h3>
+            <div class="mb-8"><span class="inline-block px-3 py-1 bg-brand-violet/10 text-brand-violet text-xs font-bold uppercase tracking-wider rounded-full">Mensual / Variable</span></div>
+            
+            <ul class="space-y-4 flex-grow">
+                <!-- Servidor VPS -->
+                <li class="flex items-start gap-4 p-2.5 hover:bg-slate-800/20 rounded-2xl transition-all duration-300">
+                    <div class="p-2.5 bg-slate-800 rounded-xl mt-1 border border-slate-700 shrink-0">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-semibold text-white">Servidor Virtual (VPS)</h4>
+                            <span class="text-slate-200 font-mono text-xs bg-slate-800 px-2 py-0.5 rounded">~5€ / mes</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Servidor privado en la nube para ejecutar de forma ininterrumpida (24/7) tu bot y los procesos automáticos.
+                        </p>
+                    </div>
+                </li>
+                <!-- API de IA -->
+                <li class="flex items-start gap-4 p-2.5 hover:bg-slate-800/20 rounded-2xl transition-all duration-300">
+                    <div class="p-2.5 bg-slate-800 rounded-xl mt-1 border border-slate-700 shrink-0">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-semibold text-white">API de Inteligencia Artificial</h4>
+                            <span class="text-slate-200 font-mono text-xs bg-slate-800 px-2 py-0.5 rounded">Pago por uso</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Aproximadamente <strong class="text-slate-200">0,005€</strong> por cada conversación de onboarding completa. Con 1.000 usuarios activos al mes el coste es de tan solo <strong class="text-slate-200">~5€/mes</strong>.
+                        </p>
+                    </div>
+                </li>
+                <!-- GHL CRM -->
+                <li class="flex items-start gap-4 p-2.5 hover:bg-slate-800/20 rounded-2xl transition-all duration-300 border border-brand-blue/20 bg-brand-blue/5">
+                    <div class="p-2.5 bg-brand-blue/20 rounded-xl mt-1 border border-brand-blue/30 shrink-0">
+                        <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-semibold text-white">Suscripción GHL (Opcional)</h4>
+                            <span class="text-slate-200 font-mono text-xs bg-slate-800 px-2 py-0.5 rounded">~67€ / mes o 708€ al año (59€/mes)</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Licencia de CRM GoHighLevel (Plan Starter). Habilita el pipeline visual ilimitado, base de datos completa de leads y triggers de arrastre.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+        <!-- ==================== DIAPOSITIVA 8: slide-8-roadmap.html ==================== -->
+<div class="slide hidden w-full max-w-6xl" id="slide-8">
+    <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center">Roadmap de <span class="text-gradient">Trabajo</span></h2>
+    
+    <div class="relative max-w-5xl mx-auto px-4">
+        <!-- Timeline Horizontal (solo en desktop) -->
+        <div class="absolute top-[0px] left-[12.5%] right-[12.5%] h-1 bg-slate-800 hidden md:block rounded-full z-0">
+            <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-brand-emerald to-brand-blue w-full rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10 mb-12">
+            
+            <!-- Semana 1 -->
+            <div class="glass-card p-6 rounded-2xl relative border-t-4 border-t-slate-600 md:border-t-0 md:border-l-0">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-brand-dark border-4 border-slate-400 rounded-full hidden md:block z-20"></div>
+                <div class="text-slate-400 font-bold text-xs tracking-widest mb-3">SEMANA 1</div>
+                <h4 class="text-white font-semibold mb-2 text-lg">Definición y Textos</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">Estructura de copies, flujos de conversación y reglas lógicas del bot.</p>
+            </div>
+
+            <!-- Semana 2 -->
+            <div class="glass-card p-6 rounded-2xl relative md:mt-24 border-t-4 border-t-brand-emerald md:border-t-0">
+                <div class="absolute -top-[112px] left-1/2 -translate-x-1/2 w-8 h-8 bg-brand-dark border-4 border-brand-emerald rounded-full hidden md:block z-20 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+                <!-- Conector vertical -->
+                <div class="absolute -top-[90px] left-1/2 -translate-x-1/2 w-0.5 h-[90px] bg-brand-emerald/30 hidden md:block z-10"></div>
+                
+                <div class="text-brand-emerald font-bold text-xs tracking-widest mb-3">SEMANA 2</div>
+                <h4 class="text-white font-semibold mb-2 text-lg">Desarrollo del Bot</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">Construcción del flujo en Telegram, panel admin y validaciones de depósito.</p>
+            </div>
+
+            <!-- Semana 3 -->
+            <div class="glass-card p-6 rounded-2xl relative border-t-4 border-t-brand-violet md:border-t-0">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-brand-dark border-4 border-brand-violet rounded-full hidden md:block z-20 shadow-[0_0_10px_rgba(139,92,246,0.5)]"></div>
+                <div class="text-brand-violet font-bold text-xs tracking-widest mb-3">SEMANA 3</div>
+                <h4 class="text-white font-semibold mb-2 text-lg">Integración TV</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">Desarrollo de los scripts de TradingView y pruebas reales de extremo a extremo.</p>
+            </div>
+
+            <!-- Lanzamiento -->
+            <div class="bg-brand-blue/10 border border-brand-blue/30 p-6 rounded-2xl relative md:mt-24 shadow-[0_0_25px_rgba(59,130,246,0.15)]">
+                <div class="absolute -top-[112px] left-1/2 -translate-x-1/2 w-8 h-8 bg-brand-dark border-4 border-brand-blue rounded-full hidden md:block z-20 shadow-[0_0_15px_rgba(59,130,246,0.8)]"></div>
+                <!-- Conector vertical -->
+                <div class="absolute -top-[90px] left-1/2 -translate-x-1/2 w-0.5 h-[90px] bg-brand-blue/30 hidden md:block z-10"></div>
+                
+                <div class="text-brand-blue font-bold text-xs tracking-widest mb-3">ENTREGA</div>
+                <h4 class="text-white font-semibold mb-2 text-lg flex items-center gap-2">Lanzamiento 🚀</h4>
+                <p class="text-xs text-slate-300 leading-relaxed">Entrega del sistema, formación de uso y despliegue a producción.</p>
+            </div>
+        </div>
+
+        <!-- Banner de Co-creación y Demos Constantes -->
+        <div class="mt-8 p-5 rounded-2xl bg-brand-emerald/5 border border-brand-emerald/20 flex flex-col md:flex-row items-center gap-4 max-w-5xl mx-auto shadow-[0_0_20px_rgba(16,185,129,0.02)]">
+            <div class="p-3 bg-brand-emerald/10 text-brand-emerald rounded-xl shrink-0 border border-brand-emerald/20">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+            </div>
+            <div class="text-center md:text-left">
+                <h4 class="text-white font-semibold text-sm mb-0.5">Garantía de Satisfacción: Acompañamiento y Demos en Vivo</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Durante todo el proceso de desarrollo realizaremos <strong>sesiones de seguimiento constantes y demos periódicas en vivo</strong> de cada avance. Podrás probar e iterar los flujos directamente para adaptarlos 100% a tus gustos y asegurar que el sistema final funcione exactamente como lo imaginas.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- ==================== DIAPOSITIVA 9: slide-9-siguientes-pasos.html ==================== -->
+<div class="slide hidden w-full max-w-5xl" id="slide-9">
+    <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Siguientes <span class="text-gradient">Pasos</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Paso 1 -->
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden border-t-4 border-t-brand-emerald hover:bg-slate-800/40 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-brand-emerald font-bold text-sm tracking-wider uppercase mb-4">Paso 01</div>
+            <h3 class="text-2xl font-bold text-white mb-4">Aprobación y Firma</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Validación final de la propuesta de desarrollo, definición exacta del alcance y formalización del inicio del proyecto.
+            </p>
+        </div>
+        <!-- Paso 2 -->
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden border-t-4 border-t-brand-blue hover:bg-slate-800/40 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-brand-blue font-bold text-sm tracking-wider uppercase mb-4">Paso 02</div>
+            <h3 class="text-2xl font-bold text-white mb-4">Acceso e Información</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Creación de accesos seguros y entrega de materiales iniciales (copies de bienvenida, credenciales de prueba para TradingView y brokers).
+            </p>
+        </div>
+        <!-- Paso 3 -->
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden border-t-4 border-t-brand-violet hover:bg-slate-800/40 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-brand-violet font-bold text-sm tracking-wider uppercase mb-4">Paso 03</div>
+            <h3 class="text-2xl font-bold text-white mb-4">Reunión de Kickoff</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Sesión de alineación inicial de 30 minutos para repasar el plan de acción detallado de la Semana 1 y comenzar el desarrollo.
+            </p>
+        </div>
+    </div>
+    <div class="mt-12 text-center">
+        <p class="text-slate-500 text-sm">¿Empezamos a automatizar tu negocio?</p>
+        <div class="mt-4 inline-flex items-center gap-2 text-brand-emerald font-semibold font-mono">
+            <span>adri@magikconsulting.es</span>
+            <span>&bull;</span>
+            <span>Julio 2026</span>
+        </div>
+    </div>
+</div>
+
+
+
+    </main>
+
+    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+    <footer class="fixed bottom-0 left-0 w-full h-[80px] px-6 md:px-12 bg-brand-dark/90 backdrop-blur-md border-t border-slate-800 z-50 flex items-center justify-between">
+        
+        <button id="prevBtn" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-800/80 text-white font-medium hover:bg-slate-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed group">
+            <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="hidden md:inline">Anterior</span>
+        </button>
+        
+        <div class="flex items-center gap-4 md:gap-6">
+            <div id="progressDots" class="flex items-center gap-2.5">
+                <!-- Puntos generados por JS -->
+            </div>
+            <span id="slideCounter" class="text-slate-400 font-mono text-sm">1 / 9</span>
+        </div>
+
+        <button id="nextBtn" class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-brand-dark font-medium hover:bg-slate-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed group">
+            <span class="hidden md:inline">Siguiente</span>
+            <span class="md:hidden">Sig</span>
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </footer>
+
+    <!-- LÓGICA DE LA PRESENTACIÓN (JS NATIVO) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalSlides = 9;
+            let currentSlide = 1;
+
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const counter = document.getElementById('slideCounter');
+            const dotsContainer = document.getElementById('progressDots');
+
+            // 1. Inicializar indicadores (dots)
+            for(let i = 1; i <= totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.setAttribute('aria-label', `Ir a diapositiva ${i}`);
+                // Estilos base
+                dot.className = `h-2 rounded-full transition-all duration-300 ease-out cursor-pointer hover:bg-slate-500`;
+                dot.id = `dot-${i}`;
+                
+                // Click en dot
+                dot.addEventListener('click', () => {
+                    currentSlide = i;
+                    updateSlide();
+                });
+                
+                dotsContainer.appendChild(dot);
+            }
+
+            // 2. Función principal de actualización
+            function updateSlide() {
+                // Ocultar todas las slides
+                document.querySelectorAll('.slide').forEach(el => {
+                    el.classList.add('hidden');
+                });
+                
+                // Mostrar la slide actual
+                const activeSlide = document.getElementById(`slide-${currentSlide}`);
+                activeSlide.classList.remove('hidden');
+
+                // Actualizar estado de botones
+                prevBtn.disabled = currentSlide === 1;
+                nextBtn.disabled = currentSlide === totalSlides;
+
+                // Actualizar texto del contador
+                counter.innerText = `${currentSlide} / ${totalSlides}`;
+
+                // Actualizar estilos de los dots
+                for(let i = 1; i <= totalSlides; i++) {
+                    const dot = document.getElementById(`dot-${i}`);
+                    if(i === currentSlide) {
+                        dot.className = 'w-8 h-2 rounded-full bg-brand-emerald transition-all duration-300 ease-out shadow-[0_0_8px_rgba(16,185,129,0.5)]';
+                    } else {
+                        dot.className = 'w-2 h-2 rounded-full bg-slate-700 transition-all duration-300 ease-out cursor-pointer hover:bg-slate-500';
+                    }
+                }
+            }
+
+            // 3. Event Listeners para botones de navegación
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    updateSlide();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    updateSlide();
+                }
+            });
+
+            // 4. Navegación con teclado (Flechas y Espacio)
+            document.addEventListener('keydown', (e) => {
+                // Ignorar si el usuario está escribiendo en algún input (por si se añadiera futuro)
+                if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') return;
+
+                if (e.key === 'ArrowRight' || e.key === ' ') {
+                    e.preventDefault();
+                    if (currentSlide < totalSlides) {
+                        currentSlide++;
+                        updateSlide();
+                    }
+                } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    if (currentSlide > 1) {
+                        currentSlide--;
+                        updateSlide();
+                    }
+                }
+            });
+
+            // Arrancar presentación
+            updateSlide();
+        });
+    </script>
+</body>
+</html>
