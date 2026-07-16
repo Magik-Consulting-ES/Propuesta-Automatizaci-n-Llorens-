@@ -79,7 +79,7 @@
         <span class="text-white">AI Setter & Onboarding</span><br/>
         <span class="text-gradient">Automatizado</span>
     </h1>
-    <p class="text-xl md:text-2xl text-slate-400 mb-16 font-light tracking-wide">Propuesta de Automatización de Procesos para Llorens</p>
+    <p class="text-xl md:text-2xl text-slate-400 mb-16 font-light tracking-wide">Propuesta de Automatización de Procesos para Llorenç</p>
     <div class="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 text-slate-500 text-sm tracking-wider uppercase">
         Presentado por <span class="text-slate-300 font-medium">Magik Consulting</span> &nbsp;&bull;&nbsp; Julio 2026
     </div>
@@ -155,69 +155,60 @@
 
 
         <!-- ==================== DIAPOSITIVA 4: slide-4-modulo-b.html ==================== -->
-<div class="slide hidden w-full max-w-6xl" id="slide-4">
+<div class="slide hidden w-full max-w-5xl" id="slide-4">
     <div class="mb-3 text-brand-blue font-bold tracking-widest uppercase text-sm">Módulo B</div>
     <h2 class="text-3xl md:text-5xl font-bold mb-4">Validación y Verificación <span class="text-gradient">de Depósitos</span></h2>
-    <p class="text-sm md:text-base text-amber-400/90 mb-8 bg-amber-500/10 border border-amber-500/20 px-4 py-2.5 rounded-xl inline-flex items-center gap-2">
+    <p class="text-sm md:text-base text-amber-400/90 mb-8 bg-amber-500/10 border border-amber-500/20 px-4 py-2.5 rounded-xl inline-flex items-center gap-2 w-full justify-center">
         <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-        <span><strong>Nota de Integración:</strong> Al no existir APIs oficiales abiertas en <strong>PU Prime</strong> ni en <strong>Bullfy</strong>, planteamos dos soluciones eficientes para verificar depósitos:</span>
+        <span><strong>Nota de Integración:</strong> Al no existir APIs oficiales abiertas en <strong>PU Prime</strong> ni en <strong>Bullfy</strong>, planteamos la siguiente solución automatizada:</span>
     </p>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Vía A -->
-        <div class="glass-card p-8 rounded-3xl border border-slate-700/60 relative overflow-hidden flex flex-col justify-between group hover:border-brand-emerald/30 transition-all duration-300">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-emerald/5 rounded-bl-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-            <div class="relative z-10">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="px-3 py-1 bg-brand-emerald/20 text-brand-emerald rounded-lg font-bold text-sm">Vía A</span>
-                    <h3 class="text-2xl font-bold text-white">Verificación Asistida por IA</h3>
+    <!-- Vía A - Centralizada y Premium -->
+    <div class="glass-card p-8 md:p-12 rounded-3xl border border-slate-700/60 relative overflow-hidden group hover:border-brand-emerald/30 transition-all duration-500 max-w-4xl mx-auto shadow-2xl">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-emerald/5 rounded-bl-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+        
+        <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+            <!-- Bloque Izquierdo: Título y Badge -->
+            <div class="flex-1 text-center md:text-left md:border-r md:border-slate-800/80 md:pr-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-emerald/10 text-brand-emerald rounded-lg font-bold text-xs uppercase tracking-wider mb-4 border border-brand-emerald/20">
+                    Proceso Automatizado
                 </div>
-                <ul class="space-y-4 text-slate-300 text-sm leading-relaxed">
-                    <li class="flex items-start gap-2.5">
-                        <span class="text-brand-emerald font-bold mt-0.5">&bull;</span>
-                        <span>El usuario realiza el depósito y sube una <strong>captura de pantalla</strong> de la transacción directamente al bot.</span>
+                <h3 class="text-3xl font-extrabold text-white mb-4">Verificación Asistida por IA</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Filtro autónomo inteligente de imágenes para validar transacciones de forma segura y veloz antes de notificarte.
+                </p>
+            </div>
+            
+            <!-- Bloque Derecho: Pasos -->
+            <div class="flex-[1.2] w-full">
+                <ul class="space-y-5">
+                    <li class="flex items-start gap-4">
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-emerald/20 text-brand-emerald font-bold text-xs">1</span>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Envío de Captura</h4>
+                            <p class="text-slate-400 text-xs mt-1 leading-relaxed">El usuario realiza el depósito en el broker y sube una <strong>captura de pantalla</strong> de la transacción directamente en el bot.</p>
+                        </div>
                     </li>
-                    <li class="flex items-start gap-2.5">
-                        <span class="text-brand-emerald font-bold mt-0.5">&bull;</span>
-                        <span>Una <strong>IA de visión</strong> integrada analiza la imagen en segundos para verificar que el importe (200€) y datos del broker sean válidos.</span>
+                    <li class="flex items-start gap-4">
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-emerald/20 text-brand-emerald font-bold text-xs">2</span>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Escaneo por IA (Visión)</h4>
+                            <p class="text-slate-400 text-xs mt-1 leading-relaxed">Una <strong>IA de visión</strong> integrada procesa la imagen para validar importe (200€) y que coincida el broker seleccionado.</p>
+                        </div>
                     </li>
-                    <li class="flex items-start gap-2.5">
-                        <span class="text-brand-emerald font-bold mt-0.5">&bull;</span>
-                        <span>Si la IA la detecta como válida, el sistema te envía una <strong>notificación directa a tu canal de preferencias</strong> con la confirmación para la posterior verificación y conceder el acceso.</span>
+                    <li class="flex items-start gap-4">
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-emerald/20 text-brand-emerald font-bold text-xs">3</span>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Notificación Directa</h4>
+                            <p class="text-slate-400 text-xs mt-1 leading-relaxed">Si es válido, el sistema envía una <strong>alerta inmediata a Llorenç</strong> para proceder a conceder el acceso de manera ágil.</p>
+                        </div>
                     </li>
                 </ul>
-            </div>
-            <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 relative z-10">
-                ⚡ <strong>Ideal para:</strong> Reducir la carga de soporte filtrando capturas falsas o erróneas automáticamente antes de que te llegue la alerta.
             </div>
         </div>
-
-        <!-- Vía B -->
-        <div class="glass-card p-8 rounded-3xl border border-slate-700/60 relative overflow-hidden flex flex-col justify-between group hover:border-brand-violet/30 transition-all duration-300">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-violet/5 rounded-bl-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-            <div class="relative z-10">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="px-3 py-1 bg-brand-violet/20 text-brand-violet rounded-lg font-bold text-sm">Vía B</span>
-                    <h3 class="text-2xl font-bold text-white">Alerta y Validación Directa</h3>
-                </div>
-                <ul class="space-y-4 text-slate-300 text-sm leading-relaxed">
-                    <li class="flex items-start gap-2.5">
-                        <span class="text-brand-violet font-bold mt-0.5">&bull;</span>
-                        <span>El usuario finaliza el proceso de depósito y pulsa un botón en el bot: <strong>"Ya he depositado"</strong>.</span>
-                    </li>
-                    <li class="flex items-start gap-2.5">
-                        <span class="text-brand-violet font-bold mt-0.5">&bull;</span>
-                        <span>El bot te envía una <strong>notificación estructurada a tu canal de preferencias</strong> indicando que el lead afirma haber terminado el depósito.</span>
-                    </li>
-                    <li class="flex items-start gap-2.5">
-                        <span class="text-brand-violet font-bold mt-0.5">&bull;</span>
-                        <span>Tú compruebas rápidamente en tu panel de afiliado de los brokers y validas y autorizas su acceso en TradingView.</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 relative z-10">
-                🛠️ <strong>Ideal para:</strong> Un control manual absoluto de afiliaciones con un desarrollo sumamente rápido y 100% fiable.
-            </div>
+        
+        <div class="mt-8 pt-6 border-t border-slate-800/80 text-center text-xs text-slate-400 relative z-10">
+            ⚡ <strong>Ventaja Clave:</strong> Elimina al 100% las capturas falsas o erróneas de forma autónoma, ahorrando incontables horas de comprobación manual.
         </div>
     </div>
 </div>
